@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  let Burger = sequelize.define("burgers", {
+  let Burger = sequelize.define("Burgers", {
     burger_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -13,8 +13,10 @@ module.exports = function(sequelize, DataTypes) {
 			defaultValue: 0
 		},
 		date: {
-			type: DataTypes.DATETIME,
+			type: DataTypes.DATE,
 			allowNull: false
 		}
-	});
+  });
+  
+  return Burger;
 };
